@@ -1,73 +1,27 @@
-# Welcome to your Lovable project
+# Stock Market Dashboard
 
-## Project info
+A clean, responsive Stock Market Dashboard built with React, Vite, Tailwind CSS, shadcn-ui, and Recharts. It features a left company list, an interactive main chart with 50/200-day SMAs, 52-week statistics, average volume, and a lightweight ML-based next-day price prediction.
 
-**URL**: https://lovable.dev/projects/06027c8a-d599-44d5-9b8d-5cfdfdf6c669
+## Tech Stack
+- React + Vite + TypeScript
+- Tailwind CSS + shadcn-ui
+- Recharts for charting
+- Mock, deterministic stock data generator (no external API needed)
 
-## How can I edit this code?
+## Development Approach (short note)
+This first version focuses on a delightful, performant frontend experience without external dependencies or CORS issues. I generated deterministic, repeatable mock time-series data for at least 10 well-known tickers using a seeded random walk, which allows consistent charts across reloads. The UI uses a two-panel layout: a scrollable company list on the left and a main panel for charts and key stats. The chart overlays 50/200-day simple moving averages and supports quick range filters (1M, 3M, 6M, 1Y, YTD, ALL). A lightweight linear regression over recent closes provides a simple next‑day prediction that’s clearly marked and visually distinct from historical data.
 
-There are several ways of editing your application.
+The design system is centralized in Tailwind CSS tokens (HSL), ensuring strong contrast, theming, and responsiveness. Components use semantic HTML and accessibility-friendly patterns. This sets a solid foundation for future enhancements like live data via a backend (FastAPI/Node or Supabase), database storage, technical indicators (RSI/MACD), and deployment (Render/Railway/Vercel).
 
-**Use Lovable**
+## Features
+- 10+ companies to browse
+- Interactive line chart with SMAs
+- 52‑week high/low and average volume
+- Time ranges: 1M, 3M, 6M, 1Y, YTD, ALL
+- One‑click next‑day prediction
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/06027c8a-d599-44d5-9b8d-5cfdfdf6c669) and start prompting.
+## Live/Deploy
+Use Lovable Share → Publish to deploy. You can also dockerize or host on Render/Railway/Vercel.
 
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/06027c8a-d599-44d5-9b8d-5cfdfdf6c669) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+## Screenshot
+Open the running app and take a screenshot of the dashboard view.

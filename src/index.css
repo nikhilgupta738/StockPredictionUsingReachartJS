@@ -53,6 +53,15 @@ All colors MUST be HSL.
     --sidebar-border: 220 13% 91%;
 
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Added brand tokens and motion */
+    --brand: 221 83% 53%;
+    --brand-contrast: 210 40% 98%;
+    --brand-muted: 221 83% 92%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(var(--brand) / 0.9), hsl(var(--ring) / 0.8));
+    --shadow-elevated: 0 8px 30px hsl(var(--ring) / 0.08);
+    --transition-smooth: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .dark {
